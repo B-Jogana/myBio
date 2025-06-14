@@ -12,7 +12,7 @@ body{
     background-color: black;
     color: #eee;
     text-align: center;
-    
+    font-family: 'Poppins', sans-serif;
 
 
 }
@@ -66,7 +66,8 @@ justify-self: center;
     color: #f5f5f5;
     text-shadow: 4px 2px 1px black;
     text-decoration: underline;
-    bottom:10px;
+    bottom: 10px;
+    
   }
 
 section{
@@ -75,14 +76,14 @@ section{
 }
 
 .service{
-      text-align: center;
+    
       background-color: #333;
       border-radius: 5px;
       margin: 0 auto;
       padding: 10px;
-      width: 60%;
-      justify-self: center;
-      align-items: center;
+      width: 80%;
+      
+    
       
 
 
@@ -92,37 +93,91 @@ section{
     color: grey;
 }
 
-ul{
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    align-items: center;
 
-  
+.service li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+
+
 }
 
-ul li{
-
-    margin: 10px 0;
+.service li label {
+    background-color: #f5f5f5;
     padding: 10px;
-    background: #eee;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-    
-    
-    
+    width: 84%;
+    border-radius: 5px;
     color: #333;
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    
+
+}
+
+.faq::after{
+    content:  "+";
+    position: absolute;
+    left: 90%;
+    font-size: 35px;
+
+    transition: transform 0.5s;
+
+}
+
+.service input[type="checkbox"]:checked + label::after{
+    transform: rotate(160deg);
+}
 
 
+input[type="checkbox"]{
+    display: none;
+}
+
+.service .prag{
+    background-color: #eee;
+    border-radius: 5px;
+    color: #333;
+    width: 84%;
+    padding: 0 10px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s, padding 1.5s;
+
+
+
+}
+
+.service input[type="checkbox"]:checked + label + .prag{
+    max-height: 500px;
+    padding: 20px 10px;
+    margin-top: 2px;
+}
+
+
+.sub-head{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.service small{
+    color: grey;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
 }
 
 contact a {
     color: lightblue;
     text-decoration: underline;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-weight: bold;
+    
 }
 
 @media screen and (max-600px) {
@@ -150,7 +205,7 @@ contact a {
     .profile h1{
         font-size: 28px;
     }
-    .about{
+    .about p {
         font-size: 20px;
     }
 }
