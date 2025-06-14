@@ -1,0 +1,211 @@
+@keyframes moveGradient{
+    100%{background-position: 100% 50%;}
+    0%{background-position: 0% 50%;}    
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+    background-color: black;
+    color: #eee;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.container{
+    padding: 20px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 700px;
+    background: grey;
+    
+
+
+
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 auto;
+}
+header h1{
+    text-shadow: 4px 4px 1px black;
+    margin-bottom: 0px;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: block;
+  border: 1px solid black;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient( grey,white,black,white);
+    background-size:400% 400% ;
+    animation:  moveGradient 2s infinite alternate;
+justify-self: center;
+
+
+
+}
+
+.profile h1{
+    position: relative;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #f5f5f5;
+    text-shadow: 4px 2px 1px black;
+    text-decoration: underline;
+    bottom: 10px;
+    
+  }
+
+section{
+    margin-bottom: 30px;
+    padding: 10;
+}
+
+.service{
+    
+      background-color: #333;
+      border-radius: 5px;
+      margin: 0 auto;
+      padding: 10px;
+      width: 80%;
+      
+    
+      
+
+
+}
+.service h2{
+    text-shadow: 1px 1px 1px black ;
+    color: grey;
+}
+
+
+.service li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+
+
+}
+
+.service li label {
+    background-color: #f5f5f5;
+    padding: 10px;
+    width: 84%;
+    border-radius: 5px;
+    color: #333;
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    
+
+}
+
+.faq::after{
+    content:  "+";
+    position: absolute;
+    left: 90%;
+    font-size: 35px;
+
+    transition: transform 0.5s;
+
+}
+
+.service input[type="checkbox"]:checked + label::after{
+    transform: rotate(160deg);
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.service .prag{
+    background-color: #eee;
+    border-radius: 5px;
+    color: #333;
+    width: 84%;
+    padding: 0 10px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s, padding 1.5s;
+
+
+
+}
+
+.service input[type="checkbox"]:checked + label + .prag{
+    max-height: 500px;
+    padding: 20px 10px;
+    margin-top: 2px;
+}
+
+
+.sub-head{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.service small{
+    color: grey;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+}
+
+contact a {
+    color: lightblue;
+    text-decoration: underline;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-600px) {
+    
+    .container{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .service{
+        width: 100%;
+    }
+    
+    ul li {
+        width: 90%;
+    }
+
+    .profile{
+        width: 80%;
+        height: 80%;
+        font-size: 20px;
+
+    }
+
+    .profile h1{
+        font-size: 28px;
+    }
+    .about p {
+        font-size: 20px;
+    }
+}
